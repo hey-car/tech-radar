@@ -1,0 +1,48 @@
+name,ring,quadrant,isNew,description
+Sentry,Adopt,Tools,FALSE,Used for receiving and analysing system errors from our frontend and backend components 
+Sentry performance monitoring,Adopt,Tools,TRUE,Used to measure and monitor Core Web Vitals (CWV) relevant performance metrics. The metrics reported by Sentry are used also to set performance metrics related goals 
+Lighthouse,Adopt,Tools,FALSE,Used as an alterntive web performance monitoring and for analyzing performance impact of the changes under development before beeing released to production 
+Datadog,Adopt,Tools,FALSE,Serves for all backend and infrastructure monitoring needs
+CicleCI,Adopt,Tools,FALSE,CI/CD for backend and frontend components
+Kibana (ELK),Adopt,Tools,FALSE,Used for all the logs from backend components
+AWS Posgres (RDS),Adopt,Platforms,FALSE,Postgres currently is our de facto standard for all application persistance needs. There might be benefits of NoSQL in some use-cases in particular with shema flexibility however we favor maintainability simplicity while sticking to Posrgres  
+AWS S3,Adopt,Platforms,FALSE,"S3 is our storage for all the images and files, except editorial content that lives in CMS"
+Elasticsearch,Adopt,Platforms,FALSE,"Used for listing search, could be used for other search needs"
+Contentful CMS,Adopt,Platforms,FALSE,"CMS solution used in various areas of heycar mainly in martech and promotion for storing static content for our product such as make/model pages, promotions content etc."
+Kotlin,Adopt,languages-and-frameworks,FALSE,Our language of choice for all the backend implementation
+Java,Hold,languages-and-frameworks,FALSE,Currently we start all new developments with Kotlin to benefit from current language advantages over Java. However we acknowledge that with current pace Java can catchup in the future with Kotlin capabilities
+Spring Framework,Adopt,languages-and-frameworks,FALSE,Our backend microservices are using Spring Boot and Spring ecosystem by default
+Golang,Hold,languages-and-frameworks,TRUE,heycar has few services implemented with Golang for performance gain or simplicity. Currently we do not have Golang skillset inside the company as well as we don't see future valid use-cases for Golang. Therefore currently Golang is seeing as on-hold technology which shouldn't be picked up for new services.
+React,Adopt,languages-and-frameworks,FALSE,Our key technology for web development
+Redux,Adopt,languages-and-frameworks,FALSE,Librarly for state persistence in web
+Next.js,Assess,languages-and-frameworks,FALSE,"Adopted by ES market as web framework, currently in assessment by other teams"
+AWS Kinesis,Adopt,Platforms,FALSE,Our solution for data streaming needs. Used for both - interservice communication and data transfer to data warehouse
+AWS ELB,Adopt,Platforms,FALSE,LB for external traffic
+kops,Adopt,Tools,FALSE,We host Kubernetes ourselves on top of AWS resources with help of kops provisioning
+Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
+keycloak,Adopt,Tools,FALSE,Solution we adopted for login and identity needs
+Terraform,Adopt,Tools,FALSE,Solution to maintain and deploy infrastrcture state and make infrastructure changes
+Code reviews,Adopt,Techniques,FALSE,By default all the code and configuration changes go through code review process within the teams
+Communities of Practice,Adopt,Techniques,FALSE,"As of now we have Backend, Frontend and Mobile community of practice where engineers across multiple teams can exchange knowledge, discuss possible solutions to common problems and align technical decisions"
+Architecture Decision Records,Adopt,Techniques,FALSE,The process and documentation format we use to capture important architecture decisions
+Incidents post-mortems,Adopt,Techniques,FALSE,Documented knowledge about hapenned incidents and collected learnings how to prevent such incidents from happenning again
+Engineering on-call process,Adopt,Techniques,FALSE,"The on-call duty is a task force of dedicated who are ""on-call"" to fix critical issues for software services as they arise. heycar adopts this technique in order to assure higher product uptime and 24/7 monitoring of possible issues in our systems"
+Proactive monitoring (Syntetic tests),Trial,Techniques,TRUE,Synthetic monitoring (also known as active monitoring or proactive monitoring) allow you to observe how your systems and applications are performing using simulated requests and actions from around the globe. Some of our teams in heycar have been using this technique for monitor application's uptime and basic rendering.
+Balanced pyramid of tests,Adopt,Techniques,FALSE,"We strongly encourage teams at heycar to implement a well balanced pyramid of tests, understanding the different layers necessary to automate software testing."
+Trunk-based development,Trial,Techniques,FALSE,"Trunk-based development (TBD) is a source-control branching model, where developers collaborate on code in a single main branch. TBD is a key enabler of Continuous Integration and by extension Continuous Delivery. Considering our success with Pair Programming in Martech team and other well established engineering pratices (well-balanced pyramid of tests and infrastructure for CI/CD), TBD is currently in trial by the team."
+Github pull request model,Adopt,Techniques,FALSE,All our teams by default are working with pull-request model. One of our teams is experiementing with trunk based development in combination with pair programming
+Webpack 5 Module Federation,Trial,languages-and-frameworks,TRUE,Allows shared modules for web-app and our other Frontend applications; evaulated by our Commerce and Integrations teams
+Yarn 2+,Assess,Tools,TRUE,"For implementation of monorepo we could be using Yarn 2+ capabilities, currently there is an ongoing assessment if that's the right pass forward"
+Redash,Adopt,Tools,FALSE,The visual tool we use to work with our data in Postgres and Elastic
+Snowflake,Adopt,Platforms,FALSE,Global data warehouse solution
+Typescript,Adopt,languages-and-frameworks,FALSE,Our choice for iOS & Android apps
+React Native,Adopt,languages-and-frameworks,FALSE,Our choice for iOS & Android apps
+Bitrise,Adopt,Tools,FALSE,Used for mobile react native CI/CD pipeline for IOS&Android
+bugsnag,Adopt,Tools,FALSE,Bugs monitoring and reporting
+Testfairy,Adopt,Tools,FALSE,Build distribution on devices to test PR and Beta builds
+firebase,Adopt,Tools,FALSE,"Push Notification on ios and android apps, Performance monitoring"
+Adjust,Adopt,Tools,FALSE,Channel Attribution collection
+vysor,Trial,Tools,TRUE,Mirror actual devices to mac machines to speed up development rather than using simulators/emulators
+Detox,Adopt,languages-and-frameworks,FALSE,"E2E tests on ios simulator. Simulator is a tool provided by Apple to mimic various devices on a mac so that we can test how the feature would look and feel. With simulators you can select the iphone models(7,8, 11, 12 max pro) and the os version they are running(ios versions 12,13,14)"
+Relese Managers,Adopt,Techniques,FALSE,"Responsible to create Beta close to the end of the sprint by trigerring a workflow, After Beta is verified, creates the release build, distributes and manages rollout from Apple and Google console according to Staged Rollout practice. The overhead for the Release Mager work is minimal but it avoid ubiquity on who is handling the topic"
+Apps Staged Rollout,Adopt,Techniques,FALSE,Rolling out new release by incrementing users distibution from 1% till 100% over the course of 7 days
