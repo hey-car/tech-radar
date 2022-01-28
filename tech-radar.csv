@@ -5,7 +5,7 @@ Lighthouse,Adopt,Tools,FALSE,Used as an alterntive web performance monitoring an
 Datadog,Adopt,Tools,FALSE,Serves for all backend and infrastructure monitoring needs
 CicleCI,Adopt,Tools,FALSE,CI/CD for backend and frontend components
 Kibana (ELK),Adopt,Tools,FALSE,Used for all the logs from backend components
-Loki,Adopt,Tools,TRUE,"Grafana based log displays, graphs and monitoring"
+Loki,Adopt,Tools,TRUE,"Grafana based log displays, graphs and monitoring used in the UK"
 AWS Posgres (RDS),Adopt,Platforms,FALSE,Postgres currently is our de facto standard for all application persistance needs. There might be benefits of NoSQL in some use-cases in particular with shema flexibility however we favor maintainability simplicity while sticking to Posrgres
 AWS S3,Adopt,Platforms,FALSE,"S3 is our storage for all the images and files, except editorial content that lives in CMS"
 Elasticsearch,Adopt,Platforms,FALSE,"Used for listing search, could be used for other search needs"
@@ -25,7 +25,7 @@ AWS Kinesis,Adopt,Platforms,FALSE,Our solution for data streaming needs. Used fo
 AWS ELB,Adopt,Platforms,FALSE,LB for external traffic
 AWS SQS,Adopt,Platforms,FALSE,Queueing in AWS
 AWS SNS,Adopt,Platforms,FALSE,"AWS Notification service, used in combination with SQS for message streaming"
-AWS MKS (Kafka),Trial,Platforms,FALSE,Kafka usage currently being spiked for streaming
+AWS MKS (Kafka),Assess,Platforms,FALSE,Kafka usage currently being spiked for streaming
 kops,Adopt,Tools,FALSE,We host Kubernetes ourselves on top of AWS resources with help of kops provisioning
 Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
 docker-compose,Adopt,Tools,FALSE,Used with Docker for local development and containerisation
