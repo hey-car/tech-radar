@@ -28,7 +28,7 @@ AWS SQS,Adopt,Platforms,FALSE,Queueing in AWS
 AWS SNS,Adopt,Platforms,FALSE,"AWS Notification service, used in combination with SQS for message streaming"
 AWS MKS (Kafka),Assess,Platforms,FALSE,Kafka usage currently being spiked for streaming by UK team
 kops,Hold,Tools,TRUE,Currently in some of our markets clusters we host k8s on top of AWS resources with help of kops provisioning
-AWS EKS (k8s),Adopt,TRUE,Our envisioned target setup is to run k8s as managed EKS service 
+AWS EKS (k8s),Adopt,Tools,TRUE,Our envisioned target setup is to run k8s as managed EKS service 
 Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
 docker-compose,Adopt,Tools,FALSE,Used with Docker for local development and containerisation
 keycloak,Adopt,Tools,FALSE,Solution we adopted for login and identity needs
