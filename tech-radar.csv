@@ -1,60 +1,65 @@
-name,ring,quadrant,isNew,description
-Sentry,Adopt,Tools,FALSE,Used for receiving and analysing system errors from our frontend and backend components
-Sentry performance monitoring,Adopt,Tools,TRUE,Used to measure and monitor Core Web Vitals (CWV) relevant performance metrics. The metrics reported by Sentry are used also to set performance metrics related goals
-Lighthouse,Adopt,Tools,FALSE,Used as an alterntive web performance monitoring and for analyzing performance impact of the changes under development before beeing released to production
-Datadog,Adopt,Tools,FALSE,Serves for all backend and infrastructure monitoring needs
-CicleCI,Adopt,Tools,FALSE,CI/CD for backend and frontend components
-Kibana (ELK),Adopt,Tools,FALSE,Used for all the logs from backend components
-Loki,Adopt,Tools,TRUE,"Grafana based log displays, graphs and monitoring used in the UK"
-AWS Posgres (RDS),Adopt,Platforms,FALSE,Postgres currently is our de facto standard for all application persistance needs. There might be benefits of NoSQL in some use-cases in particular with shema flexibility however we favor maintainability simplicity while sticking to Posrgres
-AWS Aurora,Assess,Platforms,TRUE,Evaluated as an alternative to RDS for multi-region internationalised setup
-AWS S3,Adopt,Platforms,FALSE,"S3 is our storage for all the images and files, except editorial content that lives in CMS"
-Elasticsearch,Adopt,Platforms,FALSE,"Used for listing search, could be used for other search needs"
-Contentful CMS,Adopt,Platforms,FALSE,"CMS solution used in various areas of heycar mainly in martech and promotion for storing static content for our product such as make/model pages, promotions content etc."
-Kotlin,Adopt,languages-and-frameworks,FALSE,The language used for backend development
-Java,Hold,languages-and-frameworks,FALSE,Currently we start all new developments with Kotlin to benefit from current language advantages over Java. However we acknowledge that with current pace Java can catchup in the future with Kotlin capabilities
-Spring Framework,Adopt,languages-and-frameworks,FALSE,Our backend microservices are using Spring Boot and Spring ecosystem by default
-Golang,Adopt,languages-and-frameworks,TRUE,"Used for UK infrastructure automation for speed.
-heycar has few services implemented with Golang for performance gain or simplicity. Currently we do not have Golang skillset inside the company as well as we don't see future valid use-cases for Golang. Therefore currently Golang is seeing as on-hold technology which shouldn't be picked up for new services."
-React,Adopt,languages-and-frameworks,FALSE,Our key technology for web development
-Redux,Adopt,languages-and-frameworks,FALSE,Librarly for state persistence in web
-Python,Adopt,languages-and-frameworks,FALSE,The language used for UK backend code
-FastAPI,Adopt,languages-and-frameworks,FALSE,Default web framework used on Python based microservices
+﻿name,ring,quadrant,isNew,description
+Detox,Adopt,languages-and-frameworks,FALSE,"App E2E tests on iOS simulator. Simulator is a tool provided by Apple to mimic various devices on a mac so that we can test how the feature would look and feel. With simulators you can select the iPhone models(7,8, 11, 12 max pro) and the O/S version they are running(iOS versions 12,13,14)"
 Django,Adopt,languages-and-frameworks,FALSE,Python framework used in the biggest UK application including an admin interface
+FastAPI,Adopt,languages-and-frameworks,FALSE,Default web framework used on Python based microservices
+Golang,Adopt,languages-and-frameworks,TRUE,Used for UK infrastructure automation for speed. heycar has few services implemented with Golang for performance gain or simplicity. Currently we do not have Golang skillset inside the company as well as we don't see future valid use-cases for Golang. Therefore currently Golang is seeing as on-hold technology which shouldn't be picked up for new services.
+Java,Hold,languages-and-frameworks,FALSE,Currently we start all new developments with Kotlin to benefit from current language advantages over Java. However we acknowledge that with current pace Java can catchup in the future with Kotlin capabilities
+Kotlin,Adopt,languages-and-frameworks,FALSE,The language used for backend development
 Next.js,Adopt,languages-and-frameworks,FALSE,React framework adopted by all web applications except DE
-AWS Kinesis,Adopt,Platforms,FALSE,Our solution for data streaming needs. Used for both - interservice communication and data transfer to the data warehouse
+Python,Adopt,languages-and-frameworks,FALSE,The language used for UK backend code
+React,Adopt,languages-and-frameworks,FALSE,Our key technology for web development
+React Native,Adopt,languages-and-frameworks,FALSE,Our choice for App development
+Redux,Adopt,languages-and-frameworks,FALSE,Library for state persistence in web
+Spring Framework,Adopt,languages-and-frameworks,FALSE,Our backend microservices are using Spring Boot and Spring ecosystem by default
+Typescript,Adopt,languages-and-frameworks,FALSE,Our choice for web as well as for App development
+Webpack 5 Module Federation,Assess,languages-and-frameworks,TRUE,Evaluated as a solution to split DE webapp into independent modules 
+Astronomer,Adopt,Platforms,FALSE,The cloud service used for hosting and managing our Airflow instance. Circle CI/CD has been integrated to ensure a quality deployments of Airflow
+AWS Aurora,Assess,Platforms,TRUE,Evaluated as an alternative to RDS for multi-region internationalised setup
 AWS ELB,Adopt,Platforms,FALSE,LB for external traffic
-AWS SQS,Adopt,Platforms,FALSE,Queueing in AWS
-AWS SNS,Adopt,Platforms,FALSE,"AWS Notification service, used in combination with SQS for message streaming"
+AWS Kinesis,Adopt,Platforms,FALSE,Our solution for data streaming needs. Used for both - interservice communication and data transfer to the data warehouse
 AWS MKS (Kafka),Assess,Platforms,FALSE,Kafka usage currently being spiked for streaming by UK team
-kops,Hold,Tools,TRUE,Currently in some of our markets clusters we host k8s on top of AWS resources with help of kops provisioning
-AWS EKS (k8s),Adopt,Tools,TRUE,Our envisioned target setup is to run k8s as managed EKS service 
-Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
-docker-compose,Adopt,Tools,FALSE,Used with Docker for local development and containerisation
-keycloak,Adopt,Tools,FALSE,Solution we adopted for login and identity needs
-Terraform,Adopt,Tools,FALSE,Solution to maintain and deploy infrastrcture state and make infrastructure changes
+AWS Postgres (RDS),Adopt,Platforms,FALSE,Postgres currently is our de facto standard for all application persistence needs. There might be benefits of NoSQL in some use-cases in particular with schema flexibility however we favour maintainability simplicity while sticking to Postgres
+AWS S3,Adopt,Platforms,FALSE,"S3 is our storage for all the images and files, except editorial content that lives in CMS"
+AWS SNS,Adopt,Platforms,FALSE,"AWS Notification service, used in combination with SQS for message streaming"
+AWS SQS,Adopt,Platforms,FALSE,Queueing in AWS
+Contentful CMS,Adopt,Platforms,FALSE,"CMS solution used in various areas of heycar mainly in martech and promotion for storing static content for our product such as make/model pages, promotions content etc."
+Elasticsearch,Adopt,Platforms,FALSE,"Used for listing search, could be used for other search needs"
+Snowflake,Adopt,Platforms,FALSE,Global data warehouse solution. It allows us to easily scale the platform horizontally (e.g. more nodes) or vertically (e.g. more compute). 
+App Release Managers,Adopt,Techniques,FALSE,"Responsible to create Beta close to the end of the sprint by triggering a workflow, After Beta is verified, creates the release build, distributes and manages rollout from Apple and Google console according to Staged Rollout practice. The overhead for the Release Manager work is minimal but it avoid ubiquity on who is handling the topic"
+Apps Staged Rollout,Adopt,Techniques,FALSE,Rolling out new release by incrementing users distribution from 1% till 100% over the course of 7 days
+Architecture Decision Records,Adopt,Techniques,FALSE,The process and documentation format we use to capture important architecture decisions
+Balanced pyramid of tests,Adopt,Techniques,FALSE,"We strongly encourage teams at heycar to implement a well balanced pyramid of tests, understanding the different layers necessary to automate software testing."
 Code reviews,Adopt,Techniques,FALSE,By default all the code and configuration changes go through code review process within the teams
 Communities of Practice,Adopt,Techniques,FALSE,"As of now we have Backend, Frontend and Mobile community of practice where engineers across multiple teams can exchange knowledge, discuss possible solutions to common problems and align technical decisions"
-Architecture Decision Records,Adopt,Techniques,FALSE,The process and documentation format we use to capture important architecture decisions
-Incidents post-mortems,Adopt,Techniques,FALSE,Documented knowledge about hapenned incidents and collected learnings how to prevent such incidents from happenning again
 Engineering on-call process,Adopt,Techniques,FALSE,"The on-call duty is a task force of dedicated who are ""on-call"" to fix critical issues for software services as they arise. heycar adopts this technique in order to assure higher product uptime and 24/7 monitoring of possible issues in our systems"
-Proactive monitoring (Syntetic tests),Trial,Techniques,TRUE,Synthetic monitoring (also known as active monitoring or proactive monitoring) allow you to observe how your systems and applications are performing using simulated requests and actions from around the globe. Some of our teams in heycar have been using this technique for monitor application's uptime and basic rendering.
-Balanced pyramid of tests,Adopt,Techniques,FALSE,"We strongly encourage teams at heycar to implement a well balanced pyramid of tests, understanding the different layers necessary to automate software testing."
-Trunk-based development,Trial,Techniques,FALSE,"Trunk-based development (TBD) is a source-control branching model, where developers collaborate on code in a single main branch. TBD is a key enabler of Continuous Integration and by extension Continuous Delivery. Considering our success with Pair Programming in Martech team and other well established engineering pratices (well-balanced pyramid of tests and infrastructure for CI/CD), TBD is currently in trial by the team."
-Github pull request model,Adopt,Techniques,FALSE,All our teams by default are working with pull-request model. One of our teams is experiementing with trunk based development in combination with pair programming
-Webpack 5 Module Federation,Assess,languages-and-frameworks,TRUE,Evaluated as a solution to split DE webapp into independent modules 
-Yarn Berry,Assess,Tools,TRUE,Yarn Workspaces are currently evaluated as a monorepo solution for DE webapp
-Redash,Adopt,Tools,FALSE,The visual tool we use to work with our data in Postgres and Elastic
-Snowflake,Adopt,Platforms,FALSE,Global data warehouse solution
-Typescript,Adopt,languages-and-frameworks,FALSE,Our choice for web as well as for App development
-React Native,Adopt,languages-and-frameworks,FALSE,Our choice for App development
+GitHub pull request model,Adopt,Techniques,FALSE,All our teams by default are working with pull-request model. One of our teams is experimenting with trunk based development in combination with pair programming
+Incidents post-mortems,Adopt,Techniques,FALSE,Documented knowledge about happened incidents and collected learnings how to prevent such incidents from happening again
+Proactive monitoring (Synthetic tests),Trial,Techniques,TRUE,Synthetic monitoring (also known as active monitoring or proactive monitoring) allow you to observe how your systems and applications are performing using simulated requests and actions from around the globe. Some of our teams in heycar have been using this technique for monitor application's uptime and basic rendering.
+Trunk-based development,Trial,Techniques,FALSE,"Trunk-based development (TBD) is a source-control branching model, where developers collaborate on code in a single main branch. TBD is a key enabler of Continuous Integration and by extension Continuous Delivery. Considering our success with Pair Programming in Martech team and other well established engineering practices (well-balanced pyramid of tests and infrastructure for CI/CD), TBD is currently in trial by the team."
+Adjust,Adopt,Tools,FALSE,App channel attribution collection
+Airflow,Adopt,Tools,FALSE,Our orchestration tool for managing DAG-based data pipelines.
+AWS EKS (k8s),Adopt,Tools,TRUE,Our envisioned target setup is to run k8s as managed EKS service 
 Bitrise,Adopt,Tools,FALSE,Used for mobile react native CI/CD pipeline for App
 bugsnag,Adopt,Tools,FALSE,Bugs monitoring and reporting for App
-Testfairy,Adopt,Tools,FALSE,Build distribution on devices to test PR and Beta builds for App
-firebase,Adopt,Tools,FALSE,"Push Notification for App, also helps with Performance monitoring"
-Adjust,Adopt,Tools,FALSE,App channel attribution collection
-vysor,Trial,Tools,FALSE,Mirror actual devices to mac machines to speed up development rather than using simulators/emulators (used for App development)
+CicleCI,Adopt,Tools,FALSE,CI/CD for backend and frontend components
+Datadog,Adopt,Tools,FALSE,Serves for all backend and infrastructure monitoring needs
 Delibr,Adopt,Tools,FALSE,Tool for architectural discussions progressing to technical documents in the UK
-Detox,Adopt,languages-and-frameworks,FALSE,"App E2E tests on ios simulator. Simulator is a tool provided by Apple to mimic various devices on a mac so that we can test how the feature would look and feel. With simulators you can select the iphone models(7,8, 11, 12 max pro) and the os version they are running(ios versions 12,13,14)"
-App Relese Managers,Adopt,Techniques,FALSE,"Responsible to create Beta close to the end of the sprint by trigerring a workflow, After Beta is verified, creates the release build, distributes and manages rollout from Apple and Google console according to Staged Rollout practice. The overhead for the Release Mager work is minimal but it avoid ubiquity on who is handling the topic"
-Apps Staged Rollout,Adopt,Techniques,FALSE,Rolling out new release by incrementing users distibution from 1% till 100% over the course of 7 days
+Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
+docker-compose,Adopt,Tools,FALSE,Used with Docker for local development and containerisation
+firebase,Adopt,Tools,FALSE,"Push Notification for App, also helps with Performance monitoring"
+Flagr,Adopt,Tools,FALSE,Feature flagging tool to segment users into cohorts.
+keycloak,Adopt,Tools,FALSE,Solution we adopted for login and identity needs
+Kibana (ELK),Adopt,Tools,FALSE,Used for all the logs from backend components
+kops,Hold,Tools,TRUE,Currently in some of our markets clusters we host k8s on top of AWS resources with help of kops provisioning
+Lighthouse,Adopt,Tools,FALSE,Used as an alternative web performance monitoring and for analysing performance impact of the changes under development before being released to production
+Loki,Adopt,Tools,TRUE,"Grafana based log displays, graphs and monitoring used in the UK"
+Looker,Adopt,Tools,FALSE,Our main reporting tool which sources data from Snowflake and Postgres RDS and present data into meaningful insights.
+Matillion,Hold,Tools,FALSE,Our initial orchestration tool for DAG-based. This is mainly a clickops tool which limits our ability to properly review code and can lead to improper code/data pipelines being published to production. We are in the process of migrating this to Airflow.
+Redash,Adopt,Tools,FALSE,The visual tool and SQL client we use to work with our data in Postgres and Elastic
+Segment,Adopt,Tools,FALSE,Our Customer Data Platform (CDP) used for integration of user tracking and customer systems data (e.g. CRM) and for defining tracking specifications.
+Sentry,Adopt,Tools,FALSE,Used for receiving and analysing system errors from our frontend and backend components
+Sentry performance monitoring,Adopt,Tools,TRUE,Used to measure and monitor Core Web Vitals (CWV) relevant performance metrics. The metrics reported by Sentry are used also to set performance metrics related goals
+Terraform,Adopt,Tools,FALSE,Solution to maintain and deploy infrastructure state and make infrastructure changes
+Testfairy,Adopt,Tools,FALSE,Build distribution on devices to test PR and Beta builds for App
+vysor,Trial,Tools,FALSE,Mirror actual devices to mac machines to speed up development rather than using simulators/emulators (used for App development)
+Yarn Berry,Assess,Tools,TRUE,Yarn Workspaces are currently evaluated as a monorepo solution for DE webapp
