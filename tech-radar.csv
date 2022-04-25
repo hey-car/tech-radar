@@ -45,6 +45,7 @@ CicleCI,Adopt,Tools,FALSE,CI/CD for backend and frontend components
 Datadog,Adopt,Tools,FALSE,Serves for all backend and infrastructure monitoring needs
 Delibr,Adopt,Tools,FALSE,Tool for architectural discussions progressing to technical documents in the UK
 Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
+dbt,Assess,Tools,TRUE,SQL-based transformation tool
 docker-compose,Adopt,Tools,FALSE,Used with Docker for local development and containerisation
 firebase,Adopt,Tools,FALSE,"Push Notification for App, also helps with Performance monitoring"
 Flagr,Adopt,Tools,FALSE,Feature flagging tool to segment users into cohorts.
