@@ -42,6 +42,7 @@ AWS EKS (k8s),Adopt,Tools,TRUE,Our envisioned target setup is to run k8s as mana
 Bitrise,Adopt,Tools,FALSE,Used for mobile react native CI/CD pipeline for App
 bugsnag,Adopt,Tools,FALSE,Bugs monitoring and reporting for App
 CicleCI,Adopt,Tools,FALSE,CI/CD for backend and frontend components
+ArgoCD,Adopt,Tools,TRUE, GitOPS CD for backend and frontend components
 Datadog,Adopt,Tools,FALSE,Serves for all backend and infrastructure monitoring needs
 Delibr,Adopt,Tools,FALSE,Tool for architectural discussions progressing to technical documents in the UK
 Docker containers,Adopt,Tools,FALSE,De facto standard for packaging and shipping out backend microservices
@@ -64,3 +65,6 @@ Terraform,Adopt,Tools,FALSE,Solution to maintain and deploy infrastructure state
 Testfairy,Adopt,Tools,FALSE,Build distribution on devices to test PR and Beta builds for App
 vysor,Trial,Tools,FALSE,Mirror actual devices to mac machines to speed up development rather than using simulators/emulators (used for App development)
 Yarn Berry,Assess,Tools,TRUE,Yarn Workspaces are currently evaluated as a monorepo solution for DE webapp
+Prometheus,Assess,Tools,TRUE, Monitoring, Alerting and Metrics gathering for kubernetes resources
+Grafana,Assess,Tools,TRUE, Dashboard and Graphing for Metrics
+Atlantis,Assess,Tools,TRUE, CI Chatops pipeline for terraform
