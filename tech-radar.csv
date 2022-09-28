@@ -65,6 +65,7 @@ Terraform,Adopt,Tools,FALSE,Solution to maintain and deploy infrastructure state
 Testfairy,Adopt,Tools,FALSE,Build distribution on devices to test PR and Beta builds for App
 vysor,Trial,Tools,FALSE,Mirror actual devices to mac machines to speed up development rather than using simulators/emulators (used for App development)
 Yarn Berry,Assess,Tools,TRUE,Yarn Workspaces are currently evaluated as a monorepo solution for DE webapp
-Prometheus,Assess,Tools,TRUE, Monitoring, Alerting and Metrics gathering for kubernetes resources
-Grafana,Assess,Tools,TRUE, Dashboard and Graphing for Metrics
-Atlantis,Assess,Tools,TRUE, CI Chatops pipeline for terraform
+Prometheus,Assess,Tools,TRUE,Monitoring, Alerting and Metrics gathering for kubernetes resources
+Grafana,Assess,Tools,TRUE,Dashboard and Graphing for Metrics
+Atlantis,Assess,Tools,TRUE,CI Chatops pipeline for terraform
+Phrase, Adopt,Tools,FALSE,Translation handler for all emerging and future markets
