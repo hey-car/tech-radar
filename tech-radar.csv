@@ -69,3 +69,6 @@ Prometheus,Assess,Tools,TRUE,"Monitoring, Alerting and Metrics gathering for kub
 Grafana,Assess,Tools,TRUE,Dashboard and Graphing for Metrics
 Atlantis,Assess,Tools,TRUE,CI Chatops pipeline for terraform
 Phrase, Adopt,Tools,FALSE,Translation handler for all emerging and future markets
+Serverless Framework, Assess,languages-and-frameworks,FALSE,Development solution for apps built on AWS Lambda
+AWS Lambda, Assess,Platforms,FALSE,Auto-scaling high-availability serverless compute infrastructure
+AWS API Gateway, Assess,Platforms,FALSE, Managed API gateway for webapps, containerized, and serverless workloads
